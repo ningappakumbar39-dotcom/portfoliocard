@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Card</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+        .card{
+            background-color:lightblue;
+            border-radius: 15px;
+            width: 350px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(red, green, blue, alpha);
+            animation: fadeln 0.5s ease forwards;
+
+        }
+        .card img{
+            width: 120px;
+            height: 120px;
+            border: 5px solid black;
+            object-fit: cover;
+            animation: popln 0.5s ease forwards;
+            border-radius: 20px;
+        }
+        .card h2{
+            margin: 15px 0 5px 0;
+            font-size: 22px;
+            color: blue;
+        }
+        .card h4{
+            margin: 0 0 15px 0;
+            font-weight: normal;
+            color:black;
+        }
+        .card p{
+            font-size: 14px;
+            color: purple;
+            line-height: 1.5;
+            margin-bottom: 20px;
+
+        }
+        .skills{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .skills span{
+            background-color: aqua;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            transition: transform 0.1s, background-color 0.1s;
+            cursor: default;
+        }
+        .skills span:hover{
+            transform: scale(1.1);
+            background-color: red;
+        
+        }
+        .btns{
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .btns button{
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .btn-contact{
+            background-color: blueviolet;
+            color: azure;
+        }
+        .btn-contact:hover{
+            background-color: brown;
+            transform: scale(1.05);
+
+        }
+        .btn-CV{
+            background-color:rgb(255, 0, 200);
+            color: blue;
+        }
+        .btn-CV:hover{
+            background-color: blueviolet;
+            transform: scale(1.05);
+        }
+        .footer{
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: black;
+            margin-top: 10px;
+        }
+        @keyframes fadeln{
+            from{
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+        @keyframes popln{
+            from{
+                transform: scale(2);
+                opacity: 1;
+            }
+            to{
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="idcard.jpg" alt="My Photo">
+        <h2>Tejaswini</h2>
+        <h4>Computer Science and Engineering</h4>
+        <p>I am a computer science and engineering student from Karavali Institute of Technology. Learning about new technologies always fascinates. I aspire to build new tech which help solving day-to-day problem.</p>
+        <div class="skills">
+        <span>Python Programming</span>
+        <span>C</span>
+        <span>Google cloud computing</span>
+        <span>Java</span>
+        <span>C++</span>
+        <span>Machine Learning</span>
+    </div>
+    <div class="btns">
+<button class="btn-contact" id="contactBtn">Contact Me</button>
+<button class="btn-CV" id="CVBtn">Download CV</button>
+    </div>
+    <div class="footer">
+        <span>Location:Bengaluru</span>
+        <span>Experience:Fresher</span>
+    </div>
+    </div>
+    <script>
+        let contactButton=document.getElementById("contactBtn");
+        contactButton.addEventListener("click",function(){
+            alert("9483810400 ningappakumbar39@gmail.com")
+        });
+        let CVButton=document.getElementById("CVBtn");
+        CVButton.addEventListener("click",function(){
+            alert("9483810400 ningappakumbar39@gmail.com")
+        });
+    </script>
+    
+</body>
+</html>
